@@ -10,7 +10,7 @@ func  _input(event: InputEvent):
 	if event is InputEventKey:
 		if Input.is_key_pressed(KEY_ESCAPE) and len(Global.last_scene) > 1:
 			back()
-			
+
 	if event is InputEventMouseMotion:
 		$PointLight2D.position = get_local_mouse_position()
 

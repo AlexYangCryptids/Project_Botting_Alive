@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://q0k0yvnifwxn"]
+
+[ext_resource type="FontFile" uid="uid://bqvp7drncxnhk" path="res://Art/depixel_font/DePixelHalbfett.otf" id="1_juyd6"]
+
+[resource]
+font = ExtResource("1_juyd6")
+font_size = 30
+font_color = Color(0.827451, 0.156863, 0.156863, 1)

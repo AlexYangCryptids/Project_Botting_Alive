@@ -12,14 +12,14 @@ func _process(_delta: float) -> void:
 		time_str += "0" + str(Global.time_hr)
 	else:
 		time_str += str(Global.time_hr)
-	
+
 	time_str += ":"
-	
+
 	if Global.time_min < 10:#Adds 0 infront of single digit number
 		time_str += "0" + str(Global.time_min)
 	else:
 		time_str += str(Global.time_min)
-		
+
 	$Time.text = time_str
 
 

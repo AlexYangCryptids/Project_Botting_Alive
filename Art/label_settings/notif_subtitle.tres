@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://tg4qjsoxypmf"]
+
+[ext_resource type="FontFile" uid="uid://ctp0rlsn08p0r" path="res://Art/depixel_font/DePixelBreit.ttf" id="1_ny35a"]
+
+[resource]
+font = ExtResource("1_ny35a")
+font_size = 21
+font_color = Color(0.35, 0.35, 0.35, 1)

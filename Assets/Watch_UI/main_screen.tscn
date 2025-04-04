@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dnm4hropusdvo"]
+[gd_scene load_steps=14 format=3 uid="uid://dnm4hropusdvo"]
 
 [ext_resource type="Script" uid="uid://dsj78wq7savqf" path="res://Assets/Watch_UI/main_game.gd" id="1_3aurv"]
 [ext_resource type="Texture2D" uid="uid://dousufjnfy2if" path="res://Art/img/main_background.png" id="1_pi3nr"]
@@ -7,6 +7,7 @@
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="4_fgoog"]
 [ext_resource type="Script" uid="uid://de5i54e4yiey1" path="res://Assets/Watch_UI/watch_ui.gd" id="5_jf44g"]
 [ext_resource type="Script" uid="uid://oy8dvd6g3eek" path="res://Assets/Watch_UI/timers.gd" id="5_k45j3"]
+[ext_resource type="PackedScene" uid="uid://c5aukekuebpv1" path="res://Assets/Notification/Notification.tscn" id="8_imwmw"]
 [ext_resource type="PackedScene" uid="uid://dimpgmnerdshg" path="res://Assets/Watch_UI/watch_screen_login.tscn" id="8_rmo7q"]
 [ext_resource type="Texture2D" uid="uid://bp50lh41ds5bn" path="res://Art/img/light1.png" id="10_3tfo2"]
 [ext_resource type="Texture2D" uid="uid://cechuc3vah84v" path="res://Art/img/watch_knob.png" id="10_rfeen"]
@@ -118,13 +119,15 @@ layout_mode = 2
 size_flags_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_nmlg0")
 
-[node name="UI" type="HBoxContainer" parent="WatchOverlay/Main/Panel/VBoxContainer/UIBG"]
+[node name="UI" type="HBoxContainer" parent="WatchOverlay/Main/Panel/VBoxContainer/UIBG" node_paths=PackedStringArray("panel")]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 23.0
 grow_horizontal = 2
 script = ExtResource("5_jf44g")
+panel = NodePath("../../..")
+notif_scene = ExtResource("8_imwmw")
 
 [node name="Time" type="Label" parent="WatchOverlay/Main/Panel/VBoxContainer/UIBG/UI"]
 layout_mode = 2
