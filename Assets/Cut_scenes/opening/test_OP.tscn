@@ -1,12 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://dv6pa1gp7r7qa"]
+[gd_scene load_steps=17 format=3 uid="uid://dv6pa1gp7r7qa"]
 
 [ext_resource type="Script" uid="uid://b4mxxpesc8lhs" path="res://Assets/Cut_scenes/opening/test_op.gd" id="1_u5hq3"]
 [ext_resource type="Texture2D" uid="uid://clpuvppedfgwc" path="res://Art/img/coffin_temp.png" id="2_2rdsj"]
-[ext_resource type="Texture2D" uid="uid://4a5exdcsdnmr" path="res://Assets/Cut_scenes/opening/opening_rsc/incoming_call_temp.png" id="3_rrn62"]
+[ext_resource type="Texture2D" uid="uid://bx01hg2g4gh2h" path="res://Assets/Cut_scenes/opening/opening_rsc/opening_call.png" id="3_7cqxi"]
 [ext_resource type="Script" uid="uid://3tx350p502l3" path="res://Assets/Cut_scenes/incoming_call_temp.gd" id="4_1jjtu"]
 [ext_resource type="Texture2D" uid="uid://dyop3g8em18pk" path="res://Assets/Cut_scenes/opening/opening_rsc/panel3.png" id="5_7cqxi"]
-[ext_resource type="Texture2D" uid="uid://d01eldw8hy481" path="res://Assets/Cut_scenes/opening/opening_rsc/panel1.png" id="6_0oamr"]
-[ext_resource type="Texture2D" uid="uid://dfa8yxawu7und" path="res://Assets/Cut_scenes/opening/opening_rsc/panel2.png" id="7_8cv1f"]
+[ext_resource type="Texture2D" uid="uid://beoyyjer8p5pe" path="res://Assets/Cut_scenes/opening/opening_rsc/panel1.png" id="6_0oamr"]
+[ext_resource type="Texture2D" uid="uid://bcuxqvvjaq4ra" path="res://Assets/Cut_scenes/opening/opening_rsc/panel2.png" id="7_8cv1f"]
+[ext_resource type="Texture2D" uid="uid://bejvxi457wodm" path="res://Assets/Cut_scenes/opening/opening_rsc/panel0.png" id="8_0oamr"]
+[ext_resource type="AudioStream" uid="uid://brk6j40lpbj7r" path="res://Assets/Cut_scenes/opening/opening_rsc/phone-ringtone-kontakt-312270.mp3" id="9_8cv1f"]
+[ext_resource type="AudioStream" uid="uid://b6jmrl16kxsyp" path="res://Assets/Cut_scenes/opening/opening_rsc/intro_cut1.mp3" id="10_sp5sh"]
+[ext_resource type="AudioStream" uid="uid://ep6s6xk5jjfw" path="res://Assets/Cut_scenes/opening/opening_rsc/intro_cut2.mp3" id="11_k2ccs"]
 
 [sub_resource type="Animation" id="Animation_5ap8e"]
 length = 30.0
@@ -21,6 +25,150 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(948, 548), Vector2(1000, 558), Vector2(948, 548), Vector2(1000, 558), Vector2(948, 548), Vector2(916, 560), Vector2(916, 560), Vector2(948, 548), Vector2(1000, 558), Vector2(948, 548), Vector2(1000, 558), Vector2(948, 548), Vector2(916, 560), Vector2(916, 560)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ringtone:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ringtone:volume_db")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-38.409]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("argument1:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("argument1:volume_db")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-2.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("argument2:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("argument2:volume_db")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-27.773]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2D/panel1:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2D/panel1:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2D/panel2:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2D/panel2:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.0117647)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2D/panel3:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Node2D/panel3:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_difxm"]
@@ -54,10 +202,159 @@ tracks/1/keys = {
 [sub_resource type="Animation" id="Animation_gnc1s"]
 resource_name = "test_animation"
 
+[sub_resource type="Animation" id="Animation_02qpl"]
+resource_name = "opening"
+length = 60.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ringtone:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 21.9667, 38.7667, 60.9667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, true, true, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ringtone:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 7.06667, 9.33333, 14.4333, 21.9667, 27.3667, 44.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-6.5, -6.5, -6.5, -38.409, -80.0, -5.138, -35.621]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("argument1:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("argument1:volume_db")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 17.5, 31.9667, 40.3, 55.234),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-32.034, 0.0, 0.0, -73.517, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("argument2:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(15),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("argument2:volume_db")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(22.7333, 37.3333, 39.7333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-80.0, -55.118, 0.488]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2D/panel1:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Node2D/panel1:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 7.46667, 11.7333, 23.4, 27.4667, 30.4667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.266667), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.290196), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Node2D/panel2:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Node2D/panel2:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(37.7667, 39.8667, 42.0333, 47.8333, 50.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.0117647), Color(1, 1, 1, 0.384314), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Node2D/panel3:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Node2D/panel3:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(50.1667, 52.2333, 57.1333, 59.4333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l7y5n"]
 _data = {
 &"RESET": SubResource("Animation_5ap8e"),
 &"new_animation": SubResource("Animation_difxm"),
+&"opening": SubResource("Animation_02qpl"),
 &"test_animation": SubResource("Animation_gnc1s")
 }
 
@@ -70,31 +367,51 @@ libraries = {
 }
 
 [node name="blackout" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(964.5, 561)
 scale = Vector2(1.22461, 1.04883)
 texture = ExtResource("2_2rdsj")
 
 [node name="IncomingCallTemp" type="Sprite2D" parent="."]
 position = Vector2(948, 548)
-scale = Vector2(0.345, 0.3665)
-texture = ExtResource("3_rrn62")
+scale = Vector2(1.01569, 1.01126)
+texture = ExtResource("3_7cqxi")
 script = ExtResource("4_1jjtu")
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="panel3" type="Sprite2D" parent="Node2D"]
-position = Vector2(1510, 1840)
+modulate = Color(1, 1, 1, 0)
+position = Vector2(956, 564)
 texture = ExtResource("5_7cqxi")
 
 [node name="panel1" type="Sprite2D" parent="Node2D"]
-position = Vector2(465, 1961)
+modulate = Color(1, 1, 1, 0)
+position = Vector2(965, 544)
 texture = ExtResource("6_0oamr")
 
 [node name="panel2" type="Sprite2D" parent="Node2D"]
-position = Vector2(2165, 1969)
+modulate = Color(1, 1, 1, 0.0117647)
+position = Vector2(969, 550)
 texture = ExtResource("7_8cv1f")
+
+[node name="panel0" type="Sprite2D" parent="Node2D"]
+visible = false
+position = Vector2(959.5, 555.75)
+scale = Vector2(0.997396, 0.994907)
+texture = ExtResource("8_0oamr")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(963, 556)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="ringtone" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_8cv1f")
+volume_db = -38.409
+
+[node name="argument1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_sp5sh")
+volume_db = -2.0
+
+[node name="argument2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_k2ccs")
+volume_db = -27.773

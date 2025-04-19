@@ -1,12 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://bgiqyx68h2iln"]
+[gd_scene load_steps=15 format=3 uid="uid://bgiqyx68h2iln"]
 
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_d3a78"]
 [ext_resource type="Script" uid="uid://d2fdjb2q1wtdn" path="res://Assets/Incoming_Call/Kelvin/kelvin.gd" id="2_6pr57"]
 [ext_resource type="AudioStream" uid="uid://jq5m20xude1y" path="res://Assets/Incoming_Call/Kelvin/Kelvin_rsc/Friend Cutscnece (mp3cut.net).mp3" id="3_6pr57"]
 [ext_resource type="Texture2D" uid="uid://d1fk1lpsvsq75" path="res://Assets/Incoming_Call/Kelvin/Kelvin_rsc/contact_icon.png" id="4_ul157"]
 [ext_resource type="Texture2D" uid="uid://ydbynhcsirxb" path="res://Assets/Incoming_Call/Kelvin/Kelvin_rsc/fucking_icons/icons8-phone-48.png" id="5_15hyx"]
-[ext_resource type="AudioStream" uid="uid://csuxmg3usl4ll" path="res://Assets/Incoming_Call/Kelvin/Kelvin_rsc/hangup_beep (mp3cut.net).mp3" id="6_b7asw"]
+[ext_resource type="AudioStream" uid="uid://pccrcvf6hxno" path="res://Assets/Incoming_Call/Kelvin/Kelvin_rsc/hangup.mp3" id="6_b7asw"]
 [ext_resource type="AudioStream" uid="uid://bw4a0bd5qf4fx" path="res://Assets/Incoming_Call/Kelvin/Kelvin_rsc/phone-ringtone-kontakt-312270.mp3" id="7_mkop3"]
+[ext_resource type="Texture2D" uid="uid://bpqaal7pprqxc" path="res://Assets/Incoming_Call/Kelvin/Kelvin_rsc/fucking_icons/btnhang.png" id="8_b7asw"]
+[ext_resource type="Texture2D" uid="uid://p666embxie6x" path="res://Assets/Incoming_Call/Kelvin/Kelvin_rsc/pxArt-2.png" id="9_mkop3"]
 
 [sub_resource type="Animation" id="Animation_063tc"]
 length = 0.001
@@ -71,33 +73,39 @@ libraries = {
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.504
-anchor_top = 0.475
-anchor_right = 0.53
-anchor_bottom = 0.475
-offset_left = -240.68
-offset_top = -178.0
-offset_right = 236.4
-offset_bottom = -73.0
+anchor_left = 0.514
+anchor_top = 0.448
+anchor_right = 0.514
+anchor_bottom = 0.448
+offset_left = -262.88
+offset_top = -79.84
+offset_right = 264.12
+offset_bottom = 79.16
 text = "Incoming Call 
-
 Kelvin Nguyen"
 label_settings = SubResource("LabelSettings_77pwl")
 horizontal_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(983.75, 610)
+visible = false
+position = Vector2(965, 634)
 scale = Vector2(5.07813, 4.65625)
 texture = ExtResource("4_ul157")
 
 [node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 875.0
-offset_top = 727.0
-offset_right = 1089.0
-offset_bottom = 951.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.808
+anchor_top = 0.837
+anchor_right = 0.808
+anchor_bottom = 0.837
+offset_left = -70.3601
+offset_top = -69.96
+offset_right = 71.6399
+offset_bottom = 69.04
 theme = SubResource("Theme_j3fsu")
 icon = ExtResource("5_15hyx")
+flat = true
 expand_icon = true
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
@@ -106,4 +114,35 @@ stream = ExtResource("6_b7asw")
 [node name="AudioStreamPlayer_ringtone" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_mkop3")
 
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.208
+anchor_top = 0.829
+anchor_right = 0.208
+anchor_bottom = 0.829
+offset_left = -87.36
+offset_top = -66.3201
+offset_right = 88.64
+offset_bottom = 65.6799
+icon = ExtResource("8_b7asw")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.507
+anchor_top = 0.653
+anchor_right = 0.507
+anchor_bottom = 0.653
+offset_left = -100.44
+offset_top = -100.24
+offset_right = 99.5599
+offset_bottom = 99.7599
+texture = ExtResource("9_mkop3")
+expand_mode = 1
+
 [connection signal="pressed" from="Button" to="." method="_on_accept_call_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

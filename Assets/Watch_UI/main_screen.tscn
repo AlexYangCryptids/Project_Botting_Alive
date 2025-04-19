@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://de5i54e4yiey1" path="res://Assets/Watch_UI/watch_ui.gd" id="5_jf44g"]
 [ext_resource type="Script" uid="uid://oy8dvd6g3eek" path="res://Assets/Watch_UI/timers.gd" id="5_k45j3"]
 [ext_resource type="PackedScene" uid="uid://c5aukekuebpv1" path="res://Assets/Notification/Notification.tscn" id="8_imwmw"]
-[ext_resource type="PackedScene" uid="uid://dimpgmnerdshg" path="res://Assets/Watch_UI/watch_screen_login.tscn" id="8_rmo7q"]
+[ext_resource type="PackedScene" uid="uid://bgiqyx68h2iln" path="res://Assets/Incoming_Call/Kelvin/Kelvin.tscn" id="9_imwmw"]
 [ext_resource type="Texture2D" uid="uid://bp50lh41ds5bn" path="res://Art/img/light1.png" id="10_3tfo2"]
 [ext_resource type="Texture2D" uid="uid://cechuc3vah84v" path="res://Art/img/watch_knob.png" id="10_rfeen"]
 [ext_resource type="AudioStream" uid="uid://cyytgar4i50tw" path="res://Audio/SFX/backBtnSound.wav" id="11_v11kl"]
@@ -146,12 +146,8 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Login" parent="WatchOverlay/Main/Panel/VBoxContainer/Screen" instance=ExtResource("8_rmo7q")]
+[node name="Kelvin_incoming" parent="WatchOverlay/Main/Panel/VBoxContainer/Screen" instance=ExtResource("9_imwmw")]
 layout_mode = 1
-offset_left = -4.0
-offset_top = -41.0
-offset_right = 4.0
-offset_bottom = -7.0
 
 [node name="brightness_mask" type="ColorRect" parent="."]
 visible = false

@@ -33,3 +33,12 @@ func _on_accept_call_pressed() -> void:
 	await $AudioStreamPlayer2.finished
 
 	Global.swap_scene("res://Assets/Incoming_Call/Kelvin.tscn","res://Assets/Watch_UI/watch_screen_login.tscn")
+
+
+func _on_button_2_pressed() -> void:
+	$AudioStreamPlayer_ringtone.stop() 
+	$AudioStreamPlayer.stop()
+	$AudioStreamPlayer2.play()
+	await $AudioStreamPlayer2.finished
+
+	Global.swap_scene("res://Assets/Incoming_Call/Kelvin.tscn","res://Assets/Watch_UI/watch_screen_login.tscn")

@@ -24,9 +24,17 @@ func _process(_delta: float) -> void:
 
 
 '''
-todo: press the mouse the make it work
-'''
 func _on_texture_rect_mouse_entered() -> void:
+	$AnimationPlayer.play("fade_out")
+	$AudioStreamPlayer.play()
+	await $AudioStreamPlayer.finished
+	get_node("../../UIBG/UI/Time").visible = true
+	Global.swap_scene("res://Assets/Watch_UI/watch_screen_login.tscn","res://Assets/Watch_UI/watch_screen_apps.tscn")
+'''
+
+
+
+func _on_fingerprint_pressed() -> void:
 	$AnimationPlayer.play("fade_out")
 	$AudioStreamPlayer.play()
 	await $AudioStreamPlayer.finished
