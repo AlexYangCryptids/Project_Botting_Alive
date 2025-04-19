@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://csuxmg3usl4ll"
+path="res://.godot/imported/hangup_beep (mp3cut.net).mp3-50ea7c98e9db704c0eb7accb83edf61a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Incoming_Call/Kelvin/Kelvin_rsc/hangup_beep (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/hangup_beep (mp3cut.net).mp3-50ea7c98e9db704c0eb7accb83edf61a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

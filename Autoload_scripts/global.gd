@@ -4,8 +4,8 @@ var music_vol = 0
 var sfx_vol = 0
 var bot_vol = 0
 #UI Variables
-var time_hr = 23
-var time_min = 0
+var time_hr = 09
+var time_min = 07
 var battery = 5
 #Calling Variables
 #var last_scene = ["res://Assets/Watch_UI/watch_screen_login.tscn"]

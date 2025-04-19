@@ -14,7 +14,7 @@ config/name="Botting Alive"
 run/main_scene="uid://gigljbrx6307"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/image="res://Art/BG_img1.png"
-config/icon="res://Art/GameIcon.png"
+config/icon="uid://cfd33wkkt7lng"
 
 [autoload]
 
