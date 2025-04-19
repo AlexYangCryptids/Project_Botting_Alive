@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://bgiqyx68h2iln"]
 
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_d3a78"]
-[ext_resource type="Script" uid="uid://c2qqpwh5xvtgr" path="res://Assets/Watch_UI/login.gd" id="2_ul157"]
+[ext_resource type="Script" uid="uid://d2fdjb2q1wtdn" path="res://Assets/Incoming_Call/Kelvin/kelvin.gd" id="2_6pr57"]
 [ext_resource type="AudioStream" uid="uid://jq5m20xude1y" path="res://Assets/Incoming_Call/Kelvin/Kelvin_rsc/Friend Cutscnece (mp3cut.net).mp3" id="3_6pr57"]
 [ext_resource type="Texture2D" uid="uid://d1fk1lpsvsq75" path="res://Assets/Incoming_Call/Kelvin/Kelvin_rsc/contact_icon.png" id="4_ul157"]
 [ext_resource type="Texture2D" uid="uid://ydbynhcsirxb" path="res://Assets/Incoming_Call/Kelvin/Kelvin_rsc/fucking_icons/icons8-phone-48.png" id="5_15hyx"]
@@ -35,7 +35,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
 theme = ExtResource("1_d3a78")
-script = ExtResource("2_ul157")
+script = ExtResource("2_6pr57")
 
 [node name="BG" type="Panel" parent="."]
 layout_mode = 1

@@ -3,7 +3,8 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	get_node("../../UIBG/UI/Time").visible = false
+	$AudioStreamPlayer_ringtone.play()
+	#get_node("../../UIBG/UI/Time").visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -23,12 +24,12 @@ func _process(_delta: float) -> void:
 	$Time.text = time_str
 
 
-'''
-todo: press the mouse the make it work
-'''
-func _on_texture_rect_mouse_entered() -> void:
-	$AnimationPlayer.play("fade_out")
+func _on_accept_call_pressed() -> void:
+	$Button.disabled = true
+	$AudioStreamPlayer_ringtone.stop()
 	$AudioStreamPlayer.play()
 	await $AudioStreamPlayer.finished
-	get_node("../../UIBG/UI/Time").visible = true
-	Global.swap_scene("res://Assets/Watch_UI/watch_screen_login.tscn","res://Assets/Watch_UI/watch_screen_apps.tscn")
+	$AudioStreamPlayer2.play()
+	await $AudioStreamPlayer2.finished
+
+	Global.swap_scene("res://Assets/Incoming_Call/Kelvin.tscn","res://Assets/Watch_UI/watch_screen_login.tscn")
