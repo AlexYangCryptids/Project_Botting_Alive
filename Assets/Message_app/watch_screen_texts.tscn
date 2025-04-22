@@ -44,7 +44,7 @@ cont_name = "Beth"
 
 [node name="Collin" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_p7yrn")]
 layout_mode = 2
-scene = "res://Assets/Message_app/text_template.tscn"
+scene = "res://Assets/Message_app/text_scenes/individuals/CollinAbbondi.tscn"
 cont_name = "Collin"
 
 [node name="Bank" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_p7yrn")]
@@ -54,10 +54,10 @@ cont_name = "Bank"
 
 [node name="Friend1" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_p7yrn")]
 layout_mode = 2
-scene = "res://Assets/Message_app/text_template.tscn"
-cont_name = "Alexis"
+scene = "res://Assets/Message_app/text_scenes/individuals/KelvinText.tscn"
+cont_name = "Kelvin"
 
 [node name="Dad" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_p7yrn")]
 layout_mode = 2
-scene = "res://Assets/Message_app/text_template.tscn"
-cont_name = "Dad"
+scene = "res://Assets/Message_app/text_scenes/individuals/AlexisText.tscn"
+cont_name = "Alexis"

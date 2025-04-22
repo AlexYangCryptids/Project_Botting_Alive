@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://gigljbrx6307"]
+[gd_scene load_steps=10 format=3 uid="uid://gigljbrx6307"]
 
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_wyvxh"]
 [ext_resource type="Script" uid="uid://o7v158wwbbsc" path="res://Assets/Main_menu/main_menu.gd" id="2_cpnpp"]
-[ext_resource type="Texture2D" uid="uid://dnl8kj0jhudyb" path="res://Art/cutscenes/opening/panel2.png" id="3_lv1k4"]
+[ext_resource type="Texture2D" uid="uid://cfd33wkkt7lng" path="res://Art/incoming_call_temp.png" id="3_k4p0e"]
 [ext_resource type="AudioStream" uid="uid://c2vaw5fgrfk0k" path="res://Audio/Themes/allora3-1-25.mp3" id="4_pywk0"]
 
 [sub_resource type="Animation" id="Animation_vt5fv"]
@@ -11,7 +11,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Background/text:position")
+tracks/0/path = NodePath("text:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -27,7 +27,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Background/text:position")
+tracks/0/path = NodePath("text:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -43,6 +43,15 @@ _data = {
 &"float": SubResource("Animation_y4eg7")
 }
 
+[sub_resource type="FontVariation" id="FontVariation_k4p0e"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7xfmc"]
+font = SubResource("FontVariation_k4p0e")
+font_size = 91
+font_color = Color(0.619021, 0, 0.00257827, 1)
+outline_size = 2
+outline_color = Color(0.26, 0.00519999, 0.00519999, 1)
+
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchor_left = 0.026
@@ -57,30 +66,18 @@ grow_vertical = 2
 theme = ExtResource("1_wyvxh")
 script = ExtResource("2_cpnpp")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="text" type="Label" parent="."]
+z_index = 3
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 1.407
-anchor_bottom = 1.412
-offset_left = 16.0
-offset_top = 4.0
-offset_right = -2325.8
-offset_bottom = -1316.4
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_lv1k4")
-
-[node name="text" type="Label" parent="Background"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.445
-anchor_top = 0.641
-anchor_right = 0.5
-anchor_bottom = 0.655
-offset_left = -6.40125
-offset_top = 35.7202
-offset_right = 229.999
-offset_bottom = 162.6
+anchor_left = 0.521
+anchor_top = 0.419
+anchor_right = 0.521
+anchor_bottom = 0.419
+offset_left = -1066.11
+offset_top = -162.3
+offset_right = -802.106
+offset_bottom = -83.2997
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("1_wyvxh")
@@ -92,6 +89,20 @@ theme_override_font_sizes/font_size = 15
 text = "click to play"
 horizontal_alignment = 1
 
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.407
+anchor_bottom = 1.412
+offset_left = 32.0
+offset_top = 14.0
+offset_right = -3196.8
+offset_bottom = -1393.4
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_k4p0e")
+expand_mode = 1
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_brjlr")
@@ -102,3 +113,18 @@ autoplay = "RESET"
 stream = ExtResource("4_pywk0")
 autoplay = true
 parameters/looping = false
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.498
+anchor_top = 0.251
+anchor_right = 0.498
+anchor_bottom = 0.251
+offset_left = -259.442
+offset_top = -58.7
+offset_right = 162.558
+offset_bottom = 38.3
+text = "Botting Alive"
+label_settings = SubResource("LabelSettings_7xfmc")
+horizontal_alignment = 1

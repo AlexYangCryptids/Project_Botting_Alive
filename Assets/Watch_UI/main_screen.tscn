@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dnm4hropusdvo"]
+[gd_scene load_steps=17 format=3 uid="uid://dnm4hropusdvo"]
 
 [ext_resource type="Script" uid="uid://dsj78wq7savqf" path="res://Assets/Watch_UI/main_game.gd" id="1_3aurv"]
 [ext_resource type="Texture2D" uid="uid://dd7cqi0bty0vf" path="res://Art/img/arm2.png" id="3_5kjjl"]
@@ -19,6 +19,12 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 
 [sub_resource type="LabelSettings" id="LabelSettings_imwmw"]
+
+[sub_resource type="FontVariation" id="FontVariation_imwmw"]
+
+[sub_resource type="Theme" id="Theme_03ug6"]
+default_font = SubResource("FontVariation_imwmw")
+default_font_size = 27
 
 [node name="MainScreen" type="Control"]
 layout_mode = 3
@@ -182,6 +188,30 @@ autostart = true
 [node name="SFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_v11kl")
 bus = &"SFX"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1315.0
+offset_top = 369.0
+offset_right = 1690.0
+offset_bottom = 397.0
+text = "press the side button to go back"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.465
+anchor_top = 0.929
+anchor_right = 0.465
+anchor_bottom = 0.929
+offset_left = -540.8
+offset_top = -29.32
+offset_right = 584.2
+offset_bottom = 47.68
+theme = SubResource("Theme_03ug6")
+text = "Due to technical issues, when calling, plz press buttons only after you finish the audio. 
+(we WILL fix that)"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="WatchOverlay/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="timeout" from="Timers/MinTimer" to="Timers" method="_on_min_timer_timeout"]

@@ -9,7 +9,6 @@ func _input(event: InputEvent) -> void:
 		$Panel.visible = false
 	
 
-
 func _on_line_edit_text_changed(new_text: String) -> void:
-	if new_text == "0205":
+	if new_text == "0302":
 		pass

@@ -1,0 +1,88 @@
+[gd_scene load_steps=4 format=3 uid="uid://hq7ulv7174vk"]
+
+[ext_resource type="Script" uid="uid://dvgfnuaedtfyy" path="res://Assets/Message_app/text_scenes/individuals/alexis_text.gd" id="1_wxhom"]
+[ext_resource type="Texture2D" uid="uid://c17j82ofppsu1" path="res://Assets/Message_app/text_scenes/individuals/todayisanewday.png" id="2_pa6um"]
+[ext_resource type="Texture2D" uid="uid://dt4rodtdgm2u" path="res://Assets/Message_app/text_scenes/individuals/Untitled_Artwork.png" id="3_ss1d5"]
+
+[node name="Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+script = ExtResource("1_wxhom")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_right = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.388
+anchor_top = 0.745
+anchor_right = 0.388
+anchor_bottom = 0.745
+offset_left = -147.96
+offset_top = -160.6
+offset_right = 147.04
+offset_bottom = 160.4
+texture = ExtResource("2_pa6um")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.386
+anchor_top = 0.175
+anchor_right = 0.386
+anchor_bottom = 0.175
+offset_left = -156.12
+offset_top = -152.0
+offset_right = 155.88
+offset_bottom = 152.0
+texture = ExtResource("3_ss1d5")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.676
+anchor_top = 0.179
+anchor_right = 0.676
+anchor_bottom = 0.179
+offset_left = -43.9202
+offset_top = -11.32
+offset_right = 62.0798
+offset_bottom = 11.68
+text = "03/02/2025"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.677
+anchor_top = 0.729
+anchor_right = 0.677
+anchor_bottom = 0.729
+offset_left = -29.8401
+offset_top = -10.32
+offset_right = 56.1599
+offset_bottom = 12.68
+text = "03/07/2025"

@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c1teuyrgvq0hx" path="res://Art/cutscenes/opening/panel1.png" id="4_rux2i"]
 [ext_resource type="Texture2D" uid="uid://dnl8kj0jhudyb" path="res://Art/cutscenes/opening/panel2.png" id="5_y1fhh"]
 [ext_resource type="Texture2D" uid="uid://cy0hl8xjnxxl0" path="res://Art/cutscenes/opening/panel3.png" id="6_tq6m8"]
-[ext_resource type="AudioStream" uid="uid://b6p10nlk4b0a7" path="res://audio/placeholders/Typewriter Sound Effects.mp3" id="7_jxvs5"]
+[ext_resource type="AudioStream" uid="uid://b6p10nlk4b0a7" path="res://Audio/placeholders/Typewriter Sound Effects.mp3" id="7_jxvs5"]
 [ext_resource type="Texture2D" uid="uid://bls1dqgdm1ye4" path="res://Art/gallery_images/test_img1.png" id="8_us5lh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vcawi"]

@@ -18,4 +18,4 @@ func _input(event: InputEvent) -> void:
 				get_tree().quit()
 		if event is InputEventMouseButton:
 			#animation_player.play("fade_out")
-			get_tree().change_scene_to_file("res://Assets//Watch_UI//main_screen.tscn")
+			get_tree().change_scene_to_file("res://Assets/Cut_scenes/opening/test_OP.tscn")

@@ -1,11 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://ba145u0rinaq7"]
+[gd_scene load_steps=16 format=3 uid="uid://ba145u0rinaq7"]
 
-[ext_resource type="Texture2D" uid="uid://bknomwuxmbwe3" path="res://Assets/Cut_scenes/Good_Ending1/GE1_rsc/GE1_panel1.jpg" id="1_dmfxp"]
-[ext_resource type="Texture2D" uid="uid://d0smaxiir3xrn" path="res://Assets/Cut_scenes/Good_Ending1/GE1_rsc/GE1_panel2.jpg" id="2_6nj8q"]
-[ext_resource type="Texture2D" uid="uid://cjmncetv7yoi4" path="res://Assets/Cut_scenes/Good_Ending1/GE1_rsc/GE1_panel3.png" id="3_mgj3r"]
-[ext_resource type="Texture2D" uid="uid://cmb4l8eubb5x5" path="res://Assets/Cut_scenes/Good_Ending1/GE1_rsc/GE1_panel4.png" id="4_j6x8m"]
+[ext_resource type="Script" uid="uid://nbhld05u8meu" path="res://Assets/Cut_scenes/Good_Ending1/gooding_ending_1.gd" id="1_6nj8q"]
+[ext_resource type="Texture2D" uid="uid://uwohb4xg86qi" path="res://Assets/Cut_scenes/Good_Ending1/GE1_rsc/GE_panel1.png" id="1_dmfxp"]
+[ext_resource type="Texture2D" uid="uid://dxahvqeigkhjm" path="res://Assets/Cut_scenes/Good_Ending1/GE1_rsc/GE_panel2.png" id="2_6nj8q"]
+[ext_resource type="Texture2D" uid="uid://bneo2vo5b6063" path="res://Assets/Cut_scenes/Good_Ending1/GE1_rsc/GE_panel3.png" id="3_mgj3r"]
+[ext_resource type="Texture2D" uid="uid://qq2bn6navshg" path="res://Assets/Cut_scenes/Good_Ending1/GE1_rsc/GE_panel4.png" id="4_j6x8m"]
 [ext_resource type="AudioStream" uid="uid://q76ct5aclf7x" path="res://Assets/Cut_scenes/Good_Ending1/GE1_rsc/Good Ending Mixed.mp3" id="5_2g1v0"]
 [ext_resource type="AudioStream" uid="uid://daaf56fcyy1ei" path="res://Assets/Cut_scenes/Good_Ending1/GE1_rsc/Beth.mp3" id="6_4viyt"]
+[ext_resource type="Texture2D" uid="uid://chp48bg5r6wgr" path="res://Assets/Cut_scenes/Post_Credit1/PC1_rsc/dvmHh4.png" id="8_mgj3r"]
 
 [sub_resource type="Animation" id="Animation_6ewdp"]
 resource_name = "GE1"
@@ -41,10 +43,10 @@ tracks/2/path = NodePath("panel2:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(13.4501),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 13.4501, 24.7),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [true]
+"values": [false, true, false]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -65,10 +67,10 @@ tracks/4/path = NodePath("panel3:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(24.7333, 34.5432),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 24.7333, 34.5432),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [true, false]
+"values": [false, true, false]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -77,10 +79,46 @@ tracks/5/path = NodePath("panel4:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(34.5764),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 34.5764, 41.0343),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [true]
+"values": [false, true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label3:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 41.022, 42.9709),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Label2:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 42.9709),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Sprite2D:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 42.9709),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 
 [sub_resource type="Animation" id="Animation_old4m"]
@@ -157,6 +195,42 @@ tracks/5/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label3:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Label2:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Sprite2D:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qxg5a"]
 _data = {
@@ -164,12 +238,26 @@ _data = {
 &"RESET": SubResource("Animation_old4m")
 }
 
+[sub_resource type="SystemFont" id="SystemFont_j6x8m"]
+
+[sub_resource type="Theme" id="Theme_2g1v0"]
+default_font = SubResource("SystemFont_j6x8m")
+default_font_size = 69
+
+[sub_resource type="SystemFont" id="SystemFont_4viyt"]
+
+[sub_resource type="Theme" id="Theme_6ewdp"]
+default_font = SubResource("SystemFont_4viyt")
+default_font_size = 56
+
 [node name="GoodingEnding1" type="Node2D"]
+script = ExtResource("1_6nj8q")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_qxg5a")
 }
+autoplay = "GE1"
 
 [node name="panel1" type="Sprite2D" parent="."]
 position = Vector2(985, 532)
@@ -192,5 +280,33 @@ stream = ExtResource("5_2g1v0")
 
 [node name="Beth?" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_4viyt")
-volume_db = -1.0
+volume_db = -2.0
 pitch_scale = 1.05
+
+[node name="Label3" type="Label" parent="."]
+visible = false
+offset_left = 423.0
+offset_top = 361.0
+offset_right = 1350.0
+offset_bottom = 744.0
+theme = SubResource("Theme_2g1v0")
+text = "Congratulations!!!
+You successfully saved Beth"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+offset_left = 506.0
+offset_top = 336.0
+offset_right = 1428.0
+offset_bottom = 617.0
+theme = SubResource("Theme_6ewdp")
+text = "Thanks for playing our game. 
+
+Please fill out the feedback form :)"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(921, 824)
+scale = Vector2(0.168701, 0.153906)
+texture = ExtResource("8_mgj3r")

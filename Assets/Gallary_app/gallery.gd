@@ -24,7 +24,7 @@ func _ready() -> void:
 		var image = images[i]
 		var child = TextureRect.new()
 		child.texture = image
-		child.custom_minimum_size = Vector2(100,100)
+		child.custom_minimum_size = Vector2(200,200)
 		child.connect("mouse_entered",_on_mouse_entered.bind(image,i))
 		child.connect("mouse_exited",_on_mouse_exited)
 		$ScrollContainer/GridContainer.add_child(child)
@@ -32,6 +32,7 @@ func _ready() -> void:
 
 func _input(event: InputEvent):
 	if event is InputEventMouseButton:
+	
 		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and hovering and view.visible==false:
 			view_image.texture = cur_img
 			view.visible = true
@@ -66,9 +67,8 @@ func _on_control_pressed() -> void:
 	hovering = false
 	
 
-
 func _on_line_edit_text_changed(new_text: String) -> void:
-	if new_text == "0305":
+	if new_text == "0302":
 		$Panel.visible = false
 		cur_img = images[0]
 		cur_index = 0
@@ -81,7 +81,7 @@ func _on_line_edit_text_changed(new_text: String) -> void:
 
 func _on_line_edit_editing_toggled(toggled_on: bool) -> void:
 	var new_text = $Panel/VBoxContainer/LineEdit.text
-	if new_text == "0305":
+	if new_text == "0302":
 		$Panel.visible = false
 		cur_img = images[0]
 		cur_index = 0

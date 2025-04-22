@@ -7,7 +7,7 @@ extends GridContainer
 var can_proceed = false # nvm you can skip the audio
 var dial_sequence = []
 var target_length = 10
-var target_sequence = [[8,8,8,6,6,0,5,8,1,0],[4,0,4,7,4,3,2,7,4,0]]
+var target_sequence = [[8,8,8,6,6,0,5,8,1,0],[4,0,4,7,4,3,2,7,4,0], [6,4,6,5,1,5,0,0,5,4]]
 
 var current_directory_path = "res://audio/voicebot1_main/"  # Start path
 var folder_structure = {}
@@ -46,7 +46,16 @@ func play_beep_sound():
 func _on_button_call_pressed() -> void:
 	play_beep_sound()
 	# Check if the entered sequence matches the target sequence
-	if dial_sequence in target_sequence:
+	# prioitize calling Callie 
+	if dial_sequence == [6,4,6,5,1,5,0,0,5,4]:
+		#Global.swap_scene("res://Assets/Dialing_app/watch_screen_dialing.tscn",'res://Assets/Cut_scenes/Good_Ending1/Gooding_Ending1.tscn')
+		#get_tree().current_scene.queue_free()
+		#get_tree().change_scene_to('res://Assets/Cut_scenes/Good_Ending1/Gooding_Ending1.tscn')
+		get_tree().change_scene_to_file('res://Assets/Cut_scenes/Good_Ending1/Gooding_Ending1.tscn')
+		#Global.change_scene('res://Assets/Cut_scenes/Good_Ending1/Gooding_Ending1.tscn')
+		print("enter good ending")
+	
+	elif dial_sequence in target_sequence:
 		Dialing_Global.set_current_call(dialing_num.text,dial_sequence)
 		Global.swap_scene("res://Assets/Dialing_app/watch_screen_dialing.tscn","res://Assets/Dialing_app/watch_screen_calling.tscn")
 		print("Correct sequence entered.")

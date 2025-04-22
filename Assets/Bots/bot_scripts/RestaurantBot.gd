@@ -37,7 +37,7 @@ func correct_reciept():
 	await  finished
 	play_audio("res://audio/RestaurantBot/finish the job.mp3")
 	await  finished
-	get_tree().change_scene_to_file("res://ui_scenes/ending_cut_screen.tscn")
+	get_tree().change_scene_to_file("res://Assets/Cut_scenes/Bad_Ending1/bad_ending1.tscn")
 	
 var place_order = func place_order_2():
 	reset()
@@ -96,11 +96,11 @@ func card_info():
 	reset()
 	play_audio("res://audio/RestaurantBot/card_info.mp3")
 	
-	target = ["4207661358821467"]
+	target = ["42076613"]
 	await input_recieved
 	
 	if cur_num in target:
-		order_ready()
+		order_catering_3()
 
 func order_ready():
 	reset()
@@ -112,9 +112,22 @@ func order_ready():
 func order_catering_3():
 	reset()
 	play_audio("res://audio/RestaurantBot/catering.mp3")
+	play_audio("res://audio/RestaurantBot/zip_code.mp3")
 
-	await  finished	
-	hangup()
+	target = ["30310"]
+	await input_recieved
+	
+	if cur_num in target:
+		delivery_ending()
+	
+func delivery_ending():
+	reset()
+	play_audio("res://audio/RestaurantBot/delivery_ordered.mp3")
+	await  finished
+	await get_tree().create_timer(2.0).timeout
+	play_audio("res://audio/RestaurantBot/finish the job.mp3")
+	await  finished
+	get_tree().change_scene_to_file("res://Assets/Cut_scenes/Bad_Ending1/bad_ending1.tscn")
 
 func _exit_tree() -> void:
 	Unlockable.OrderPlaced =  false
